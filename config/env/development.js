@@ -23,11 +23,14 @@ if (fs.existsSync(envFile)) {
  * Expose
  */
 
+var FACEBOOK_APP_ID = 343195729218869;
+var FACEBOOK_APP_SECRET = 'd6e3830c44a08bc8b57032048d94dd65';
+
 module.exports = {
   db: 'mongodb://localhost/noobjs_dev',
   facebook: {
-    clientID: process.env.FACEBOOK_CLIENTID,
-    clientSecret: process.env.FACEBOOK_SECRET,
+    clientID: FACEBOOK_APP_ID,
+    clientSecret: FACEBOOK_APP_SECRET,
     callbackURL: "http://localhost:3000/auth/facebook/callback"
   },
   twitter: {
